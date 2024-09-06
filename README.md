@@ -1,4 +1,4 @@
-# Konoha FAQ - Projeto feito na imersão Dev com o Google Gemini em parceria com a Alura.
+Konoha FAQ - Projeto feito na imersão Dev com o Google Gemini em parceria com a Alura.
 
 ## Descrição
 
