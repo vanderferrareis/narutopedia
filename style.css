@@ -51,7 +51,7 @@ section {
 
 /* Estiliza os inputs dentro das seções */
 section input {
-    width: 100%; /* Largura dos inputs ajusta-se à tela */
+    width: 300px; /* Largura dos inputs ajusta-se à tela */
     max-width: 30rem; /* Largura máxima */
     border: none; /* Remove a borda padrão */
     padding: 1rem; /* Espaçamento interno */
