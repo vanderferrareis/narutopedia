@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <title>Konoha FAQ</title>
+</head>
+<body>   
+    <header>
+        <img src="img/logo.png" alt="Logo Konoha FAQ" class="logo">
+        <h1>
+            NARUTOPEDIA
+        </h1>
+        <h2>Tudo sobre Naruto em um só lugar</h2>
+    </header>
+    <main>
+        <section>
+            <input type="text" id="campo-pesquisa" placeholder="Qual é o seu ninja favorito?">
+            <button onclick="pesquisar()">Pesquisar</button>
+            <button onclick="limparPesquisa()">Limpar pesquisa</button>
+        </section>
+        <section class="resultados-pesquisa" id="resultados-pesquisa">
+        </section>
+    </main>
+    <footer>
+        <p>
+           &copy; 2024 - Konoha FAQ. Todos os direitos reservados
+        </p>
+        <p>
+            Projeto feito por <a href="https://www.github.com/vanderferrareis" target="_blank">Vander Ferrareis</a>
+        </p>
+    </footer>
+    <script src="dados.js"></script>
+    <script src="app.js"></script> 
+</body>
+</html>
