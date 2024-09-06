@@ -16,7 +16,7 @@ body {
 
 /* Posição da logo */
 .logo {
-    position:absolute; 
+    position: absolute; 
     top: 10px;
     left: 10px;
     width: 150px;
@@ -39,8 +39,7 @@ h2 {
     color: #000000; /* Ajuste a cor conforme necessário */
     margin-bottom: 1rem; /* Ajuste a margem inferior conforme necessário */
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff; 
-    
-  }
+}
 
 /* Estiliza as seções da página */
 section {
@@ -52,7 +51,8 @@ section {
 
 /* Estiliza os inputs dentro das seções */
 section input {
-    width: 30rem; /* Largura dos inputs */
+    width: 100%; /* Largura dos inputs ajusta-se à tela */
+    max-width: 30rem; /* Largura máxima */
     border: none; /* Remove a borda padrão */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 1.5rem; /* Borda arredondada */
@@ -62,6 +62,7 @@ section input {
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
+/* Estiliza as mensagens de erro */
 .mensagem-erro {
     color: rgb(10, 0, 0); /* Cor preta para destaque */
     font-size: 1.2em; /* Tamanho da fonte maior */
@@ -76,7 +77,7 @@ section input {
 
 /* Estiliza os botões dentro das seções */
 section {
-     display: flex;
+    display: flex;
     flex-wrap: nowrap; /* Garante que os itens não quebrem para a próxima linha */
     justify-content: flex-start; /* Alinha os itens ao início da linha */
     gap: 8px; /* Adiciona um espaço entre o campo e os botões */
@@ -84,16 +85,14 @@ section {
 }
 
 input[type="text"] {
-    flex-grow: 0; /* Faz o campo de pesquisa expandir para ocupar o espaço restante */
+    flex-grow: 0; /* O input não expande */
     max-width: 300px; 
-    padding: 0.8rem; /* Espaçamento interno do campo de pesquisa */
-    font-size: 1rem; /* Tamanho da fonte no campo de pesquisa */
-    min-width: 300px;
+    padding: 0.8rem; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
     margin: 0;
 }
 
 section button {
-    flex-basis: auto;
     padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
@@ -101,7 +100,6 @@ section button {
     color: #0d0d0e; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    margin: 0;
 }
 
 /* Adiciona efeito hover ao botão de pesquisa */
@@ -112,8 +110,9 @@ section button:hover {
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
-    width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
+    width: 100%; /* Largura ajusta-se à tela */
+    max-width: 60rem; /* Define uma largura máxima */
+    height: 46vh; /* Altura da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
@@ -141,15 +140,8 @@ section button:hover {
     color: #30475E; /* Cor do texto dos links */
 }
 
-/* Estiliza os links quando são passados o mouse sobre */
 .item-resultado a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-}
-
-/* Estiliza a descrição meta dentro dos itens de resultado */
-.descricao-meta {
-    color: #000000; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem acima e abaixo */
 }
 
 /* Estiliza o rodapé da página */
@@ -164,54 +156,61 @@ footer {
     font-size: 1rem; /* Tamanho da fonte */
 }
 
+/* Responsividade para tablets */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem; /* Tamanho da fonte em telas menores */
-        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+        letter-spacing: 0.2rem; /* Espaçamento entre letras */
     }
 
     section input {
-        width: 25rem; /* Largura dos inputs em telas menores */
-        padding: 0.8rem; /* Espaçamento interno em telas menores */
+        width: 25rem; /* Largura dos inputs */
+        padding: 0.8rem;
     }
 
     .resultados-pesquisa {
-        width: 40rem; /* Largura da caixa de resultados em telas menores */
-        height: 40vh; /* Altura da caixa de resultados em telas menores */
+        width: 90%; /* Largura da caixa de resultados em telas menores */
+        height: 40vh;
     }
 
     .item-resultado h2 {
-        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+        font-size: 1.3rem;
     }
 }
 
 /* Responsividade para celulares */
 @media (max-width: 480px) {
-
     h1 {
-        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
-        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
     }
 
     section input {
-        width: 17rem; /* Largura total dos inputs em telas pequenas */
+        width: 100%;
+        max-width: 17rem; /* Largura dos inputs em telas pequenas */
     }
 
     section button {
-        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
-        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem; /* Tamanho da fonte */
     }
 
     .resultados-pesquisa {
-        width: 90%; /* Largura da caixa de resultados em telas pequenas */
-        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+        width: 100%; /* Largura ajusta-se à tela */
+        height: 50vh;
     }
 
     .item-resultado h2 {
-        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
+        font-size: 1.1rem;
     }
 
     footer {
-        font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 80px; /* Reduz o tamanho da logo */
+        top: 5px;
+        left: 5px;
     }
 }
