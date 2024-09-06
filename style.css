@@ -152,11 +152,12 @@ footer {
     background-color: #ff8a05; /* Cor de fundo do rodapé */
     color: #000000; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
+    padding: 1rem 0; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
-    position: absolute; /* Posiciona o rodapé */
-    bottom: 0; /* Alinha ao fundo da página */
+    position: fixed; /* Fixa o rodapé no fundo da tela */
+    bottom: 0; /* Alinha ao fundo da tela */
     font-size: 1rem; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding na largura total */
 }
 
 /* Responsividade para tablets */
